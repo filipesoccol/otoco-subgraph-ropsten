@@ -1,6 +1,20 @@
-type ExampleEntity @entity {
+enum JURISDICTION {
+  DELAWARE,
+  WYOMING
+}
+
+type Master @entity {
   id: ID!
-  count: BigInt!
-  _contract: Bytes! # address
-  _owner: Bytes! # address
+  companiesCount: Int!
+  companies: [Company]!
+  jurisdiction: JURISDICTION!
+}
+
+type Company @entity {
+  id: ID!
+  parent: Master!
+  name: String! # Series name
+  jurisdiction: JURISDICTION!
+  creator: Bytes! # address
+  owner: Bytes! # address
 }
