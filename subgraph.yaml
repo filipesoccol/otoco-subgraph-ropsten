@@ -69,7 +69,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Company
-    network: mainnet
+    network: ropsten
     source:
       abi: CompanyContract
     mapping:
