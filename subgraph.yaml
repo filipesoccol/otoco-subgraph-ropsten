@@ -6,7 +6,7 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: MasterDelaware
-    network: mainnet
+    network: ropsten
     source:
       address: "0x861995a262516a98c1face4c63bee22fbc6251c6"
       abi: MasterContract
@@ -37,7 +37,7 @@ dataSources:
       file: ./src/master.ts
   - kind: ethereum/contract
     name: MasterWyoming
-    network: mainnet
+    network: ropsten
     source:
       address: "0x8f332a747e4907fa51921f4e025cb1ae6fbbe9b2"
       abi: MasterContract
