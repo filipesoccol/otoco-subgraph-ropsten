@@ -17,4 +17,5 @@ type Company @entity {
   jurisdiction: JURISDICTION!
   creator: Bytes! # address
   owner: Bytes! # address
+  creation: BigInt!
 }
