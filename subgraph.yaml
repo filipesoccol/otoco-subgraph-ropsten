@@ -66,6 +66,37 @@ dataSources:
         - event: TokenWithdrawn(address,uint256)
           handler: handleTokenWithdrawn
       file: ./src/master.ts
+  - kind: ethereum/contract
+    name: MasterDAO
+    network: ropsten
+    source:
+      address: "0x40729ECE9D0390163ceBe4BDf93b7600dF574673"
+      abi: MasterContract
+      startBlock: 11087458
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Master
+        - Company
+      abis:
+        - name: MasterContract
+          file: ./abis/Master.json
+      eventHandlers:
+        - event: NewSeriesCreated(address,address,string)
+          handler: handleNewSeriesCreated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: ReceiveTokenFrom(address,uint256)
+          handler: handleReceiveTokenFrom
+        - event: SeriesFeeChanged(uint256,uint256)
+          handler: handleSeriesFeeChanged
+        - event: TokenAddrChanged(address,address)
+          handler: handleTokenAddrChanged
+        - event: TokenWithdrawn(address,uint256)
+          handler: handleTokenWithdrawn
+      file: ./src/master.ts
 templates:
   - kind: ethereum/contract
     name: Company

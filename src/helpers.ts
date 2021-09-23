@@ -1,2 +1,4 @@
 export const MASTER_DELAWARE = '0x861995a262516a98c1face4c63bee22fbc6251c6'
 export const MASTER_WYOMING = '0x8f332a747e4907fa51921f4e025cb1ae6fbbe9b2'
+export const MASTER_DAO = '0x40729ece9d0390163cebe4bdf93b7600df574673'
+export const MASTER_REGISTRY = '0x8f332a747e4907fa51921f4e025cb1ae6fbbe9b2'
