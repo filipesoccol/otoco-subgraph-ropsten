@@ -26,6 +26,7 @@ export function handleNewSeriesCreated(event: NewSeriesCreated): void {
   
   let newCompany = new Company(event.params._contract.toHexString())
   newCompany.creation = event.block.timestamp;
+  newCompany.modified = event.block.timestamp;
   newCompany.owner = event.params._owner
   newCompany.creator = event.params._owner
   newCompany.name = event.params._name
